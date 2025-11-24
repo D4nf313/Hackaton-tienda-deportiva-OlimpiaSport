@@ -123,6 +123,7 @@
 
 .flip-back {
     transform: rotateY(180deg);
+}
 footer {
     background-color: #C2C7F5;
     color: black;
