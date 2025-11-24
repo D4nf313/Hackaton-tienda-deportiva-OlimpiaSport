@@ -77,7 +77,7 @@ const productosMujeres = [
     precio: 189900,
     precioOriginal: 260000,
     descuento: 27,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/mujer/8.jpg",
     tallas: {
       disponibles: [
         "US 4",
@@ -99,7 +99,7 @@ const productosMujeres = [
     precio: 210000,
     precioOriginal: 300000,
     descuento: 30,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/mujer/6.jpg",
     tallas: {
       disponibles: [
         "US 4.5",
@@ -120,7 +120,7 @@ const productosMujeres = [
     precio: 174900,
     precioOriginal: 240000,
     descuento: 2,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/mujer/7.jpg",
     tallas: {
       disponibles: ["US 4", "US 5", "US 5.5", "US 6", "US 6.5", "US 7"],
       agotadas: [
