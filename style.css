@@ -46,6 +46,19 @@
   color: #68ac73 !important;
 }
 
+.btn-olimpia {
+  background-color: #585FBF;
+  color: white;
+  border: none;
+}
+
+.btn-olimpia:hover {
+  background-color: #4A51A8;
+}
+
+
+
+
 
 /* Carrusel: ojo */
 
