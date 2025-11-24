@@ -38,13 +38,14 @@
                     </li>   
                 </ul>
                 <div class="dropdown ms-auto">
-                    <a class="nav-link dropdown-toggle" href="#" id="carritoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">    
+                    <a class="nav-link dropdown-toggle" href="#" id="carritoDropdown" role="button" data-bs-toggle="dropdown" data-bs-target="#navbarSupportedContent" aria-expanded="false">    
                     <i class="bi bi-cart-fill" id="carrito" style="font-size: 1.5rem;"></i>
+                    <span id="conteo_carrito" class="badge bg-danger ms-1">0</span>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="carrotpDropdown">
-                        <li><h6 class="dropdown-header" style="font-weight: bold">Carrito de compras</a></li>
-                        <li><hr class = "dropdown-divider"></li>
-                        <li id="carrito_vacio" class="dropdown-item">No hay productos agregados</li>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="carritoDropdown" id="productos_carrito">
+                      <li><h6 class="dropdown-header" style="font-weight: bold">Carrito de compras</h6></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li id="carrito_vacio" class="dropdown-item">No hay productos agregados</li>
                     </ul>
                 </div>
             </div>
@@ -54,6 +55,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
   <head>

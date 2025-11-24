@@ -251,6 +251,7 @@ function renderProductos(containerId, productosArray, categoria) {
   activarBotonesCarrito();
 }
 
+
 // 3. SISTEMA DE SELECCIÓN DE TALLAS
 
 const tallasSeleccionadas = {}; // { id_producto: "talla seleccionada" }
@@ -289,6 +290,10 @@ function activarBotonesCarrito() {
 
 //  CARRITO
 let carrito = [];
+if (localStorage.getItem("carrito")) {
+  carrito = JSON.parse(localStorage.getItem("carrito"));
+}
+actualizarCarrito();
 
 function agregarAlCarrito(idProducto, categoria) {
 console.log(categoria)
@@ -318,6 +323,10 @@ console.log(categoria)
     categoria: categoria,
   });
 
+  actualizarCarrito();
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+
   Swal.fire({
     icon: "success",
     title: "Agregado al carrito",
@@ -330,3 +339,74 @@ console.log(categoria)
 renderProductos("storeMenContainer", productosHombres, "hombre");
 renderProductos("storeGirlContainer", productosMujeres, "mujer");
 renderProductos("storeKidContainer", productosNinos, "ninos");
+
+
+
+
+// Funciones para agragar y actualizar al carrito al carrito
+
+// Funcion actualizar carrito
+function actualizarCarrito(){
+  const productosCarrito = document.getElementById("productos_carrito");
+  const conteoCarrito = document.getElementById("conteo_carrito");
+
+  // Esto es para mantener el encabezado y la linea divisoria en el dropdown
+  productosCarrito.innerHTML= `
+  <li><h6 class="dropdown-header"> Carrito de Compras</h6>
+  <li><hr class="dropdown-divider"></hr></li>
+  `;
+  
+  // Verfica si la lista de carrito está vacía y la imprime en el dropdown
+  if (carrito.length=== 0){
+    productosCarrito.innerHTML += `<li id="carrito_vacio" class="dropdown-item text-center">No hay productos agregados</li>`;
+    conteoCarrito.textContent = "0";
+    return;
+  }
+
+  const resumenCarrito = {};
+  carrito.forEach(prod =>{
+    const clave = `${prod.id}-${prod.tallaSeleccionada}`;
+    if (resumenCarrito[clave] === undefined) {
+      resumenCarrito[clave] = { ...prod, cantidad: 1 };
+    } else {
+      resumenCarrito[clave].cantidad += 1;
+    }
+  });
+
+  conteoCarrito.textContent = carrito.length;
+  for (const clave in resumenCarrito) {
+  const p = resumenCarrito[clave];
+  productosCarrito.innerHTML += `
+    <li class="dropdown-item d-flex align-items-center gap-2">
+      <img src="${p.imagen}" alt="${p.nombre}" style="width:40px; height:40px;">
+      <div>
+        <div class="fw-bold">${p.nombre}</div>
+        <div class="small text-muted">Talla: ${p.tallaSeleccionada}</div>
+      </div>
+      <span class="badge bg-primary ms-auto">${p.cantidad}</span>
+      <button class="btn btn-danger btn-sm ms-2 borrar_producto_carrito" data-clave="${clave}">
+        <i class= "bi bi-trash">
+      </button>
+    </li>
+  `;
+  }
+
+  document.querySelectorAll('.borrar_producto_carrito').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const clave = this.dataset.clave;
+      const [id, talla] = clave.split('-');
+      carrito = carrito.filter(function(producto) {
+        if (producto.id === id && producto.tallaSeleccionada === talla) {
+          return false; 
+        }
+        return true;
+      });
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      actualizarCarrito();
+    });
+  });
+}
+
+
+
+

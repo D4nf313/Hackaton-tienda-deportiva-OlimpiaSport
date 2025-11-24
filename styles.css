@@ -15,11 +15,32 @@
   transition: box-shadow 0.3s;
 }
 
+.navbar{
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .navbar-nav{
   display: flex !important;
   gap: 30px !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.navbar-collapse{
+  background-color: #c2c7f5; 
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
 .link {
   position: relative;
@@ -44,20 +65,16 @@
   width: 100%;
 }
 
-@media (max-width: 991px) {
-  .link::after {
-    display: none !important;
-   }
-   #logo{
-    height: 90px !important;
-   }
-  }
 
 #carrito {
   color: #101965  !important;      
   padding: 8px;
   border-radius: 10px;
 }
+
+
+
+
 
 
 
