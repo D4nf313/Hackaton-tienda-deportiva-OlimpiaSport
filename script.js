@@ -29,7 +29,7 @@ const productosHombres = [
     precio: 219900,
     precioOriginal: 320000,
     descuento: 31,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/hombres/3.jpg",
     tallas: {
       disponibles: ["US 7", "US 7.5", "US 8", "US 8.5", "US 9", "US 10"],
       agotadas: [
@@ -50,7 +50,7 @@ const productosHombres = [
     precio: 249900,
     precioOriginal: 349900,
     descuento: 28,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/hombres/2.jpg",
     tallas: {
       disponibles: ["US 6", "US 6.5", "US 7", "US 8", "US 9"],
       agotadas: [
@@ -65,6 +65,49 @@ const productosHombres = [
       ],
     },
   },
+
+  {
+    id: 1004,
+    nombre: "Adidas Galaxy 6",
+    precio: 219900,
+    precioOriginal: 320000,
+    descuento: 31,
+    imagen: "./img/hombres/4.jpg",
+    tallas: {
+      disponibles: ["US 7", "US 7.5", "US 8", "US 8.5", "US 9", "US 10"],
+      agotadas: [
+        "US 5",
+        "US 5.5",
+        "US 6",
+        "US 6.5",
+        "US 9.5",
+        "US 10.5",
+        "US 11",
+      ],
+    },
+  },
+
+  {
+    id: 1005,
+    nombre: "Adidas Galaxy 6",
+    precio: 219900,
+    precioOriginal: 320000,
+    descuento: 31,
+    imagen: "./img/hombres/1.jpg",
+    tallas: {
+      disponibles: ["US 7", "US 7.5", "US 8", "US 8.5", "US 9", "US 10"],
+      agotadas: [
+        "US 5",
+        "US 5.5",
+        "US 6",
+        "US 6.5",
+        "US 9.5",
+        "US 10.5",
+        "US 11",
+      ],
+    },
+  },
+
 ];
 
 const productosMujeres = [
