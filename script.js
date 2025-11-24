@@ -77,7 +77,7 @@ const productosMujeres = [
     precio: 189900,
     precioOriginal: 260000,
     descuento: 27,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/mujer/7.jpg",
     tallas: {
       disponibles: [
         "US 4",
@@ -99,7 +99,7 @@ const productosMujeres = [
     precio: 210000,
     precioOriginal: 300000,
     descuento: 30,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/mujer/6.jpg",
     tallas: {
       disponibles: [
         "US 4.5",
@@ -120,7 +120,7 @@ const productosMujeres = [
     precio: 174900,
     precioOriginal: 240000,
     descuento: 2,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/mujer/7.jpg",
     tallas: {
       disponibles: ["US 4", "US 5", "US 5.5", "US 6", "US 6.5", "US 7"],
       agotadas: [
@@ -182,12 +182,12 @@ const productosNinos = [
 
 const productosDescuentos = [
   {
-    id: 3001,
+    id: 4001,
     nombre: "Adidas Galaxy 6",
     precio: 149900,
     precioOriginal: 300000,
     descuento: 50,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/promos/tenis20.jpeg",
     tallas: {
       disponibles: ["US 4", "US 4.5", "US 5", "US 5.5", "US 6"],
       agotadas: ["US 6.5", "US 7", "US 7.5", "US 8", "US 8.5"]
@@ -195,12 +195,12 @@ const productosDescuentos = [
   },
 
   {
-    id: 3002,
+    id: 4002,
     nombre: "Nike Revolution 6",
     precio: 129900,
     precioOriginal: 260000,
     descuento: 50,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+     imagen: "./img/promos/tenis18.jpg",
     tallas: {
       disponibles: ["US 4.5", "US 5", "US 5.5", "US 6"],
       agotadas: ["US 6.5", "US 7", "US 7.5", "US 8"]
@@ -208,12 +208,12 @@ const productosDescuentos = [
   },
 
   {
-    id: 3003,
+    id: 4003,
     nombre: "Puma ST Runner",
     precio: 159900,
     precioOriginal: 280000,
     descuento: 43,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+     imagen: "./img/promos/tenis19.jpg",
     tallas: {
       disponibles: ["US 4", "US 5", "US 5.5", "US 6"],
       agotadas: ["US 6.5", "US 7", "US 7.5", "US 8"]
