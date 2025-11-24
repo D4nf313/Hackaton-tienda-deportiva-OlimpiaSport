@@ -29,7 +29,7 @@ const productosHombres = [
     precio: 219900,
     precioOriginal: 320000,
     descuento: 31,
-    imagen: "./img/hombres/3.jpg",
+    imagen: "./img/hombres/2.jpg",
     tallas: {
       disponibles: ["US 7", "US 7.5", "US 8", "US 8.5", "US 9", "US 10"],
       agotadas: [
@@ -50,7 +50,7 @@ const productosHombres = [
     precio: 249900,
     precioOriginal: 349900,
     descuento: 28,
-    imagen: "./img/hombres/2.jpg",
+    imagen: "./img/hombres/6.jpg",
     tallas: {
       disponibles: ["US 6", "US 6.5", "US 7", "US 8", "US 9"],
       agotadas: [
@@ -66,47 +66,7 @@ const productosHombres = [
     },
   },
 
-  {
-    id: 1004,
-    nombre: "Adidas Galaxy 6",
-    precio: 219900,
-    precioOriginal: 320000,
-    descuento: 31,
-    imagen: "./img/hombres/4.jpg",
-    tallas: {
-      disponibles: ["US 7", "US 7.5", "US 8", "US 8.5", "US 9", "US 10"],
-      agotadas: [
-        "US 5",
-        "US 5.5",
-        "US 6",
-        "US 6.5",
-        "US 9.5",
-        "US 10.5",
-        "US 11",
-      ],
-    },
-  },
-
-  {
-    id: 1005,
-    nombre: "Adidas Galaxy 6",
-    precio: 219900,
-    precioOriginal: 320000,
-    descuento: 31,
-    imagen: "./img/hombres/1.jpg",
-    tallas: {
-      disponibles: ["US 7", "US 7.5", "US 8", "US 8.5", "US 9", "US 10"],
-      agotadas: [
-        "US 5",
-        "US 5.5",
-        "US 6",
-        "US 6.5",
-        "US 9.5",
-        "US 10.5",
-        "US 11",
-      ],
-    },
-  },
+  
 
 ];
 
@@ -159,7 +119,7 @@ const productosMujeres = [
     nombre: "Puma Flyer Runner",
     precio: 174900,
     precioOriginal: 240000,
-    descuento: 27,
+    descuento: 2,
     imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
     tallas: {
       disponibles: ["US 4", "US 5", "US 5.5", "US 6", "US 6.5", "US 7"],
@@ -218,6 +178,49 @@ const productosNinos = [
 
    
 ];
+
+
+const productosDescuentos = [
+  {
+    id: 3001,
+    nombre: "Adidas Galaxy 6",
+    precio: 149900,
+    precioOriginal: 300000,
+    descuento: 50,
+    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    tallas: {
+      disponibles: ["US 4", "US 4.5", "US 5", "US 5.5", "US 6"],
+      agotadas: ["US 6.5", "US 7", "US 7.5", "US 8", "US 8.5"]
+    }
+  },
+
+  {
+    id: 3002,
+    nombre: "Nike Revolution 6",
+    precio: 129900,
+    precioOriginal: 260000,
+    descuento: 50,
+    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    tallas: {
+      disponibles: ["US 4.5", "US 5", "US 5.5", "US 6"],
+      agotadas: ["US 6.5", "US 7", "US 7.5", "US 8"]
+    }
+  },
+
+  {
+    id: 3003,
+    nombre: "Puma ST Runner",
+    precio: 159900,
+    precioOriginal: 280000,
+    descuento: 43,
+    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    tallas: {
+      disponibles: ["US 4", "US 5", "US 5.5", "US 6"],
+      agotadas: ["US 6.5", "US 7", "US 7.5", "US 8"]
+    }
+  }
+];
+
 
 // 2. FUNCIÓN PARA RENDERIZAR PRODUCTOS
 function renderProductos(containerId, productosArray, categoria) {
@@ -278,7 +281,7 @@ function renderProductos(containerId, productosArray, categoria) {
 
           </div>
      <button 
-            class="btn btn-dark w-100 add-to-cart-btn"
+            class="btn btn-olimpia add-to-cart-btn px-4 d-block mx-auto"
             data-id="${producto.id}"
             data-category="${categoria}"
           >
@@ -342,7 +345,7 @@ console.log(categoria)
   if (categoria === "hombre") arrayOrigen = productosHombres;
   if (categoria === "mujer") arrayOrigen = productosMujeres;
   if (categoria === "ninos") arrayOrigen = productosNinos;
-
+  if (categoria === "descuentos") arrayOrigen = productosDescuentos;
   const prod = arrayOrigen.find((p) => p.id === idProducto);
 
   const talla = tallasSeleccionadas[idProducto];
@@ -375,3 +378,4 @@ console.log(categoria)
 renderProductos("storeMenContainer", productosHombres, "hombre");
 renderProductos("storeGirlContainer", productosMujeres, "mujer");
 renderProductos("storeKidContainer", productosNinos, "ninos");
+renderProductos("storeDiscountContainer", productosDescuentos, "descuentos");
