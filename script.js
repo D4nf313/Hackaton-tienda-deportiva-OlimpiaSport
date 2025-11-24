@@ -296,7 +296,6 @@ function renderProductos(containerId, productosArray, categoria) {
   });
  
   activarTallasClick();
-  activarBotonesCarrito();
 }
  
 // 3. SISTEMA DE SELECCIÓN DE TALLAS
@@ -322,24 +321,13 @@ function activarTallasClick() {
   });
 }
  
-function activarBotonesCarrito() {
-  const botones = document.querySelectorAll(".add-to-cart-btn");
- 
-  botones.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const idProducto = parseInt(btn.dataset.id);
-      const categoria = btn.dataset.category;
- 
-      agregarAlCarrito(idProducto, categoria);
-    });
-  });
-}
+
  
 //  CARRITO
 let carrito = [];
  
 function agregarAlCarrito(idProducto, categoria) {
-console.log(categoria)
+console.log(carrito)
   let arrayOrigen;
  
   if (categoria === "hombre") arrayOrigen = productosHombres;
@@ -372,7 +360,19 @@ console.log(categoria)
     text: `${prod.nombre} (${talla}) fue agregado correctamente.`,
     confirmButtonColor: "#000",
   });
+
+    actualizarCarrito();
 }
+
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".add-to-cart-btn")) {
+    const btn = e.target.closest(".add-to-cart-btn");
+    const id = parseInt(btn.dataset.id);
+    const category = btn.dataset.category;
+    agregarAlCarrito(id, category);
+  }
+});
+
  
 // Ejecutar
 renderProductos("storeMenContainer", productosHombres, "hombre");
@@ -432,6 +432,7 @@ function actualizarCarrito(){
     btn.addEventListener('click', function() {
       const clave = this.dataset.clave;
       const [id, talla] = clave.split('-');
+      console.log(carrito)
       carrito = carrito.filter(function(producto) {
         if (producto.id === id && producto.tallaSeleccionada === talla) {
           return false; 
