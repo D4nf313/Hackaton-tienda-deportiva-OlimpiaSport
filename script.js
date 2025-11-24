@@ -6,7 +6,7 @@ const productosHombres = [
     precio: 194968,
     precioOriginal: 299950,
     descuento: 30,
-    imagen: "https://deportivoscarvajal.com/cdn/shop/files/zapato1_cc8132eb-912d-4c77-8378-c604406e0fab_1080x1080.jpg?v=1728675315",
+    imagen: "./img/hombres/1.jpg",
     tallas: {
       disponibles: [
         "US 5",
