@@ -1,14 +1,12 @@
-// ============================
 // 1. BASE DE DATOS DE PRODUCTOS
-// ============================
 const productosHombres = [
   {
-    id: 1,
+    id: 1001,
     nombre: "Tenis Runfalcon 2.0",
     precio: 194968,
     precioOriginal: 299950,
     descuento: 30,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "https://deportivoscarvajal.com/cdn/shop/files/zapato1_cc8132eb-912d-4c77-8378-c604406e0fab_1080x1080.jpg?v=1728675315",
     tallas: {
       disponibles: [
         "US 5",
@@ -21,139 +19,163 @@ const productosHombres = [
         "US 8.5",
         "US 9",
       ],
-      agotadas: ["US 9.5", "US 10", "US 10.5"],
+      agotadas: ["US 9.5", "US 10", "US 10.5", "US 11"],
     },
   },
+
   {
-    id: 1,
-    nombre: "Tenis Runfalcon 2.0",
-    precio: 194968,
-    precioOriginal: 299950,
-    descuento: 30,
+    id: 1002,
+    nombre: "Adidas Galaxy 6",
+    precio: 219900,
+    precioOriginal: 320000,
+    descuento: 31,
     imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
     tallas: {
-      disponibles: [
+      disponibles: ["US 7", "US 7.5", "US 8", "US 8.5", "US 9", "US 10"],
+      agotadas: [
         "US 5",
         "US 5.5",
         "US 6",
         "US 6.5",
-        "US 7",
-        "US 7.5",
-        "US 8",
-        "US 8.5",
-        "US 9",
-        "US 10",
+        "US 9.5",
         "US 10.5",
+        "US 11",
       ],
-      agotadas: ["US 9.5"],
     },
   },
-  ,
+
   {
-    id: 1,
-    nombre: "Tenis Runfalcon 2.0",
-    precio: 194968,
-    precioOriginal: 299950,
-    descuento: 30,
+    id: 1003,
+    nombre: "Nike Revolution 6",
+    precio: 249900,
+    precioOriginal: 349900,
+    descuento: 28,
     imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
     tallas: {
-      disponibles: [
+      disponibles: ["US 6", "US 6.5", "US 7", "US 8", "US 9"],
+      agotadas: [
         "US 5",
         "US 5.5",
-        "US 6",
-        "US 6.5",
-        "US 7",
         "US 7.5",
-        "US 8",
         "US 8.5",
-        "US 9",
+        "US 9.5",
         "US 10",
         "US 10.5",
+        "US 11",
       ],
-      agotadas: ["US 9.5"],
-    },
-  },
-  ,
-  {
-    id: 1,
-    nombre: "Tenis Runfalcon 2.0",
-    precio: 194968,
-    precioOriginal: 299950,
-    descuento: 30,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
-    tallas: {
-      disponibles: [
-        "US 5",
-        "US 5.5",
-        "US 6",
-        "US 6.5",
-        "US 7",
-        "US 7.5",
-        "US 8",
-        "US 8.5",
-        "US 9",
-        "US 10",
-        "US 10.5",
-      ],
-      agotadas: ["US 9.5"],
-    },
-  },
-  ,
-  {
-    id: 1,
-    nombre: "Tenis Runfalcon 2.0",
-    precio: 194968,
-    precioOriginal: 299950,
-    descuento: 30,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
-    tallas: {
-      disponibles: [
-        "US 5",
-        "US 5.5",
-        "US 6",
-        "US 6.5",
-        "US 7",
-        "US 7.5",
-        "US 8",
-        "US 8.5",
-        "US 9",
-        "US 10",
-        "US 10.5",
-      ],
-      agotadas: ["US 9.5"],
-    },
-  },
-  ,
-  {
-    id: 1,
-    nombre: "Tenis Runfalcon 2.0",
-    precio: 194968,
-    precioOriginal: 299950,
-    descuento: 30,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
-    tallas: {
-      disponibles: [
-        "US 5",
-        "US 5.5",
-        "US 6",
-        "US 6.5",
-        "US 7",
-        "US 7.5",
-        "US 8",
-        "US 8.5",
-        "US 9",
-        "US 10",
-        "US 10.5",
-      ],
-      agotadas: ["US 9.5"],
     },
   },
 ];
 
-// ===================================
+const productosMujeres = [
+  {
+    id: 2001,
+    nombre: "Adidas Cloudfoam",
+    precio: 189900,
+    precioOriginal: 260000,
+    descuento: 27,
+    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    tallas: {
+      disponibles: [
+        "US 4",
+        "US 4.5",
+        "US 5",
+        "US 5.5",
+        "US 6",
+        "US 6.5",
+        "US 7",
+        "US 7.5",
+      ],
+      agotadas: ["US 8", "US 8.5", "US 9", "US 9.5", "US 10", "US 10.5"],
+    },
+  },
+
+  {
+    id: 2002,
+    nombre: "Nike Downshifter",
+    precio: 210000,
+    precioOriginal: 300000,
+    descuento: 30,
+    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    tallas: {
+      disponibles: [
+        "US 4.5",
+        "US 5",
+        "US 5.5",
+        "US 6",
+        "US 6.5",
+        "US 7",
+        "US 7.5",
+      ],
+      agotadas: ["US 8", "US 8.5", "US 9", "US 9.5", "US 10", "US 10.5"],
+    },
+  },
+
+  {
+    id: 2003,
+    nombre: "Puma Flyer Runner",
+    precio: 174900,
+    precioOriginal: 240000,
+    descuento: 27,
+    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    tallas: {
+      disponibles: ["US 4", "US 5", "US 5.5", "US 6", "US 6.5", "US 7"],
+      agotadas: [
+        "US 7.5",
+        "US 8",
+        "US 8.5",
+        "US 9",
+        "US 9.5",
+        "US 10",
+        "US 10.5",
+      ],
+    },
+  },
+];
+
+const productosNinos = [
+  {
+    id: 3001,
+    nombre: "Adidas Tensaur",
+    precio: 139900,
+    precioOriginal: 180000,
+    descuento: 22,
+    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    tallas: {
+      disponibles: ["US 1", "US 1.5", "US 2", "US 2.5", "US 3", "US 3.5"],
+      agotadas: ["US 4", "US 4.5", "US 5", "US 5.5"],
+    },
+  },
+
+  {
+    id: 3002,
+    nombre: "Nike Star Runner",
+    precio: 159900,
+    precioOriginal: 210000,
+    descuento: 24,
+    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    tallas: {
+      disponibles: ["US 1.5", "US 2", "US 2.5", "US 3", "US 3.5", "US 4"],
+      agotadas: ["US 4.5", "US 5", "US 5.5", "US 1"],
+    },
+  },
+
+  {
+    id: 3003,
+    nombre: "Puma Anzarun",
+    precio: 149900,
+    precioOriginal: 200000,
+    descuento: 25,
+    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    tallas: {
+      disponibles: ["US 1", "US 1.5", "US 2", "US 2.5", "US 3", "US 3.5"],
+      agotadas: ["US 4", "US 4.5", "US 5", "US 5.5"],
+    },
+  },
+];
+
 // 2. FUNCIÓN PARA RENDERIZAR PRODUCTOS
-// ===================================
-function renderProductos(containerId, productosArray) {
+function renderProductos(containerId, productosArray, categoria) {
   const container = document.getElementById(containerId);
   if (!container) {
     console.error(`No existe el contenedor con ID: ${containerId}`);
@@ -210,10 +232,11 @@ function renderProductos(containerId, productosArray) {
               .join("")}
 
           </div>
-
-          <button class="btn btn-dark w-100" onclick="agregarAlCarrito(${
-            producto.id
-          })">
+     <button 
+            class="btn btn-dark w-100 add-to-cart-btn"
+            data-id="${producto.id}"
+            data-category="${categoria}"
+          >
             Agregar al carrito
           </button>
         </div>
@@ -225,6 +248,7 @@ function renderProductos(containerId, productosArray) {
   });
 
   activarTallasClick();
+  activarBotonesCarrito();
 }
 
 // 3. SISTEMA DE SELECCIÓN DE TALLAS
@@ -250,27 +274,59 @@ function activarTallasClick() {
   });
 }
 
-// 4. CARRITO
+function activarBotonesCarrito() {
+  const botones = document.querySelectorAll(".add-to-cart-btn");
 
+  botones.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const idProducto = parseInt(btn.dataset.id);
+      const categoria = btn.dataset.category;
+
+      agregarAlCarrito(idProducto, categoria);
+    });
+  });
+}
+
+//  CARRITO
 let carrito = [];
 
-function agregarAlCarrito(idProducto) {
-  const prod = productos.find((p) => p.id === idProducto);
+function agregarAlCarrito(idProducto, categoria) {
+console.log(categoria)
+  let arrayOrigen;
+
+  if (categoria === "hombre") arrayOrigen = productosHombres;
+  if (categoria === "mujer") arrayOrigen = productosMujeres;
+  if (categoria === "ninos") arrayOrigen = productosNinos;
+
+  const prod = arrayOrigen.find((p) => p.id === idProducto);
+
   const talla = tallasSeleccionadas[idProducto];
 
   if (!talla) {
-    alert("Selecciona una talla antes de agregar al carrito");
+    Swal.fire({
+      icon: "warning",
+      title: "Selecciona una talla",
+      text: "Debes elegir una talla antes de agregar al carrito",
+      confirmButtonColor: "#000",
+    });
     return;
   }
 
   carrito.push({
     ...prod,
     tallaSeleccionada: talla,
+    categoria: categoria,
   });
 
-  console.log("Carrito:", carrito);
-  alert("Producto agregado al carrito");
+  Swal.fire({
+    icon: "success",
+    title: "Agregado al carrito",
+    text: `${prod.nombre} (${talla}) fue agregado correctamente.`,
+    confirmButtonColor: "#000",
+  });
 }
 
 // Ejecutar
-renderProductos("storeMenContainer", productosHombres);
+renderProductos("storeMenContainer", productosHombres, "hombre");
+renderProductos("storeGirlContainer", productosMujeres, "mujer");
+renderProductos("storeKidContainer", productosNinos, "ninos");

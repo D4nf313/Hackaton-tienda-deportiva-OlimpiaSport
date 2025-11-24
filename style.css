@@ -19,7 +19,6 @@
   height: 220px;
   object-fit: contain;
   background-color: #f3f3f3;
-  padding: 20px;
 }
 .old-price {
   text-decoration: line-through;
@@ -124,4 +123,26 @@
 
 .flip-back {
     transform: rotateY(180deg);
+footer {
+    background-color: #C2C7F5;
+    color: black;
+    padding-top: 20px;
+    margin-top: auto;
+}
+
+footer a {
+    color: black;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer li {
+    margin: 10px;
 }
