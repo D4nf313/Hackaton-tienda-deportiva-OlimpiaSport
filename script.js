@@ -77,7 +77,7 @@ const productosMujeres = [
     precio: 189900,
     precioOriginal: 260000,
     descuento: 27,
-    imagen: "./img/mujer/8.jpg",
+    imagen: "./img/mujer/7.jpg",
     tallas: {
       disponibles: [
         "US 4",
