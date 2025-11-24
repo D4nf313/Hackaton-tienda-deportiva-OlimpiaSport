@@ -6,7 +6,7 @@ const productosHombres = [
     precio: 194968,
     precioOriginal: 299950,
     descuento: 30,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "https://deportivoscarvajal.com/cdn/shop/files/zapato1_cc8132eb-912d-4c77-8378-c604406e0fab_1080x1080.jpg?v=1728675315",
     tallas: {
       disponibles: [
         "US 5",
@@ -70,7 +70,7 @@ const productosHombres = [
 const productosMujeres = [
   {
     id: 2001,
-    nombre: "Adidas Cloudfoam Mujer",
+    nombre: "Adidas Cloudfoam",
     precio: 189900,
     precioOriginal: 260000,
     descuento: 27,
@@ -92,7 +92,7 @@ const productosMujeres = [
 
   {
     id: 2002,
-    nombre: "Nike Downshifter Mujer",
+    nombre: "Nike Downshifter",
     precio: 210000,
     precioOriginal: 300000,
     descuento: 30,
@@ -113,7 +113,7 @@ const productosMujeres = [
 
   {
     id: 2003,
-    nombre: "Puma Flyer Runner Mujer",
+    nombre: "Puma Flyer Runner",
     precio: 174900,
     precioOriginal: 240000,
     descuento: 27,
@@ -136,7 +136,7 @@ const productosMujeres = [
 const productosNinos = [
   {
     id: 3001,
-    nombre: "Adidas Tensaur Kids",
+    nombre: "Adidas Tensaur",
     precio: 139900,
     precioOriginal: 180000,
     descuento: 22,
@@ -149,7 +149,7 @@ const productosNinos = [
 
   {
     id: 3002,
-    nombre: "Nike Star Runner Kids",
+    nombre: "Nike Star Runner",
     precio: 159900,
     precioOriginal: 210000,
     descuento: 24,
@@ -162,7 +162,7 @@ const productosNinos = [
 
   {
     id: 3003,
-    nombre: "Puma Anzarun Kids",
+    nombre: "Puma Anzarun",
     precio: 149900,
     precioOriginal: 200000,
     descuento: 25,
