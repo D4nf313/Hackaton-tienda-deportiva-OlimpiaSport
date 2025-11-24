@@ -1,0 +1,64 @@
+#menu{
+  position: fixed;  
+  background-color: #c2c7f5 !important;  
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100px;
+  transition: top 0.3s ease;
+     
+}
+
+#menu:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s;
+}
+
+.navbar-nav{
+  display: flex !important;
+  gap: 30px !important;
+}
+
+
+.link {
+  position: relative;
+  transition: color 0.3s ease;
+  color: #101965 !important;
+  font-weight: bold;
+}
+
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #101965 ;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .link::after {
+    display: none !important;
+   }
+   #logo{
+    height: 90px !important;
+   }
+  }
+
+#carrito {
+  color: #101965  !important;      
+  padding: 8px;
+  border-radius: 10px;
+}
+
+
+
+
