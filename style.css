@@ -18,8 +18,6 @@
   width: 100%;
   height: 220px;
   object-fit: contain;
-  background-color: #f3f3f3;
-  padding: 20px;
 }
 .old-price {
   text-decoration: line-through;
@@ -48,6 +46,96 @@
   color: #68ac73 !important;
 }
 
+.btn-olimpia {
+  background-color: #585FBF;
+  color: white;
+  border: none;
+}
+
+.btn-olimpia:hover {
+  background-color: #4A51A8;
+}
+
+
+
+
+
+/* Carrusel: ojo */
+
+.carousel-wrapper {
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+   
+#carouselExample .carousel-inner img {
+    height: 450px;
+    object-fit: contain; 
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    background-color: #000;
+  }
+
+
+#carouselExample .carousel-control-prev-icon,
+#carouselExample .carousel-control-next-icon {
+      filter: invert(1);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 50%;
+    }
+
+#carouselExample {
+    margin-top: 80px;  
+}
+
+/* Tarjetas de publicidad: ojo */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+
+.flip-card {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px; 
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;  
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.flip-front img,
+.flip-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
 footer {
     background-color: #C2C7F5;
     color: black;
