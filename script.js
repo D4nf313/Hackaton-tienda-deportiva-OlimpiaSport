@@ -50,7 +50,7 @@ const productosHombres = [
     precio: 249900,
     precioOriginal: 349900,
     descuento: 28,
-    imagen: "./img/hombres/6.jpg",
+    imagen: "./img/hombres/3.jpg",
     tallas: {
       disponibles: ["US 6", "US 6.5", "US 7", "US 8", "US 9"],
       agotadas: [
@@ -139,7 +139,7 @@ const productosMujeres = [
 const productosNinos = [
   {
     id: 3001,
-    nombre: "Adidas Tensaur",
+    nombre: "Nike Star Runner",
     precio: 139900,
     precioOriginal: 180000,
     descuento: 22,
@@ -152,7 +152,7 @@ const productosNinos = [
 
   {
     id: 3002,
-    nombre: "Nike Star Runner",
+    nombre: "Adidas Kids Tenis Gazelle",
     precio: 159900,
     precioOriginal: 210000,
     descuento: 24,
@@ -165,7 +165,7 @@ const productosNinos = [
 
   {
     id: 3003,
-    nombre: "Adidas Streettalk",
+    nombre: "New Balance 480",
     precio: 149900,
     precioOriginal: 200000,
     descuento: 25,
