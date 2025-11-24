@@ -50,7 +50,7 @@ const productosHombres = [
     precio: 249900,
     precioOriginal: 349900,
     descuento: 28,
-    imagen: "./img/hombres/6.jpg",
+    imagen: "./img/hombres/3.jpg",
     tallas: {
       disponibles: ["US 6", "US 6.5", "US 7", "US 8", "US 9"],
       agotadas: [
@@ -120,7 +120,7 @@ const productosMujeres = [
     precio: 174900,
     precioOriginal: 240000,
     descuento: 2,
-    imagen: "./img/mujer/7.jpg",
+    imagen: "./img/mujer/8.jpg",
     tallas: {
       disponibles: ["US 4", "US 5", "US 5.5", "US 6", "US 6.5", "US 7"],
       agotadas: [
