@@ -143,10 +143,10 @@ const productosNinos = [
     precio: 139900,
     precioOriginal: 180000,
     descuento: 22,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/nino/11.jpg",
     tallas: {
-      disponibles: ["US 1", "US 1.5", "US 2", "US 2.5", "US 3", "US 3.5"],
-      agotadas: ["US 4", "US 4.5", "US 5", "US 5.5"],
+      disponibles: ["US 3.5", "US 4", "US 4.5", "US 5"],
+      agotadas: ["US 5.5", "US 6", "US 6.5", "US 7"],
     },
   },
 
@@ -156,36 +156,38 @@ const productosNinos = [
     precio: 159900,
     precioOriginal: 210000,
     descuento: 24,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/nino/12.jpg",
     tallas: {
-      disponibles: ["US 1.5", "US 2", "US 2.5", "US 3", "US 3.5", "US 4"],
-      agotadas: ["US 4.5", "US 5", "US 5.5", "US 1"],
+      disponibles: ["US 3.5", "US 4", "US 4.5", "US 5","US 5.5"],
+      agotadas: ["US 6", "US 6.5", "US 7"],
     },
   },
 
   {
     id: 3003,
-    nombre: "Puma Anzarun",
+    nombre: "Adidas Streettalk",
     precio: 149900,
     precioOriginal: 200000,
     descuento: 25,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/nino/13.jpg",
     tallas: {
-      disponibles: ["US 1", "US 1.5", "US 2", "US 2.5", "US 3", "US 3.5"],
-      agotadas: ["US 4", "US 4.5", "US 5", "US 5.5"],
+      disponibles: ["US 3.5", "US 4", "US 4.5", "US 5"],
+      agotadas: ["US 5.5", "US 6", "US 6.5", "US 7"],
     },
   },
+
+   
 ];
 
 
 const productosDescuentos = [
   {
-    id: 3001,
+    id: 4001,
     nombre: "Adidas Galaxy 6",
     precio: 149900,
     precioOriginal: 300000,
     descuento: 50,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/promos/tenis16.jpeg",
     tallas: {
       disponibles: ["US 4", "US 4.5", "US 5", "US 5.5", "US 6"],
       agotadas: ["US 6.5", "US 7", "US 7.5", "US 8", "US 8.5"]
@@ -193,7 +195,7 @@ const productosDescuentos = [
   },
 
   {
-    id: 3002,
+    id: 4002,
     nombre: "Nike Revolution 6",
     precio: 129900,
     precioOriginal: 260000,
@@ -206,7 +208,7 @@ const productosDescuentos = [
   },
 
   {
-    id: 3003,
+    id: 4003,
     nombre: "Puma ST Runner",
     precio: 159900,
     precioOriginal: 280000,
