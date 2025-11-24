@@ -47,3 +47,27 @@
   background-color: #000 !important;
   color: #68ac73 !important;
 }
+
+footer {
+    background-color: #C2C7F5;
+    color: black;
+    padding-top: 20px;
+    margin-top: auto;
+}
+
+footer a {
+    color: black;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer li {
+    margin: 10px;
+}
