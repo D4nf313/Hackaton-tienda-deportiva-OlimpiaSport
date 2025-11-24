@@ -22,7 +22,7 @@ const productosHombres = [
       agotadas: ["US 9.5", "US 10", "US 10.5", "US 11"],
     },
   },
-
+ 
   {
     id: 1002,
     nombre: "Adidas Galaxy 6",
@@ -43,7 +43,7 @@ const productosHombres = [
       ],
     },
   },
-
+ 
   {
     id: 1003,
     nombre: "Nike Revolution 6",
@@ -65,11 +65,11 @@ const productosHombres = [
       ],
     },
   },
-
-  
-
+ 
+ 
+ 
 ];
-
+ 
 const productosMujeres = [
   {
     id: 2001,
@@ -92,7 +92,7 @@ const productosMujeres = [
       agotadas: ["US 8", "US 8.5", "US 9", "US 9.5", "US 10", "US 10.5"],
     },
   },
-
+ 
   {
     id: 2002,
     nombre: "Nike Downshifter",
@@ -113,7 +113,7 @@ const productosMujeres = [
       agotadas: ["US 8", "US 8.5", "US 9", "US 9.5", "US 10", "US 10.5"],
     },
   },
-
+ 
   {
     id: 2003,
     nombre: "Puma Flyer Runner",
@@ -135,7 +135,7 @@ const productosMujeres = [
     },
   },
 ];
-
+ 
 const productosNinos = [
   {
     id: 3001,
@@ -149,7 +149,7 @@ const productosNinos = [
       agotadas: ["US 5.5", "US 6", "US 6.5", "US 7"],
     },
   },
-
+ 
   {
     id: 3002,
     nombre: "Adidas Kids Tenis Gazelle",
@@ -162,7 +162,7 @@ const productosNinos = [
       agotadas: ["US 6", "US 6.5", "US 7"],
     },
   },
-
+ 
   {
     id: 3003,
     nombre: "New Balance 480",
@@ -175,11 +175,11 @@ const productosNinos = [
       agotadas: ["US 5.5", "US 6", "US 6.5", "US 7"],
     },
   },
-
+ 
    
 ];
-
-
+ 
+ 
 const productosDescuentos = [
   {
     id: 4001,
@@ -193,7 +193,7 @@ const productosDescuentos = [
       agotadas: ["US 6.5", "US 7", "US 7.5", "US 8", "US 8.5"]
     }
   },
-
+ 
   {
     id: 4002,
     nombre: "Nike Revolution 6",
@@ -206,7 +206,7 @@ const productosDescuentos = [
       agotadas: ["US 6.5", "US 7", "US 7.5", "US 8"]
     }
   },
-
+ 
   {
     id: 4003,
     nombre: "Puma ST Runner",
@@ -220,8 +220,8 @@ const productosDescuentos = [
     }
   }
 ];
-
-
+ 
+ 
 // 2. FUNCIÓN PARA RENDERIZAR PRODUCTOS
 function renderProductos(containerId, productosArray, categoria) {
   const container = document.getElementById(containerId);
@@ -229,36 +229,36 @@ function renderProductos(containerId, productosArray, categoria) {
     console.error(`No existe el contenedor con ID: ${containerId}`);
     return;
   }
-
+ 
   container.innerHTML = "";
-
+ 
   productosArray.forEach((producto) => {
     const col = document.createElement("div");
     col.classList.add("col-md-4");
-
+ 
     col.innerHTML = `
       <div class="card product-card shadow-sm">
-
+ 
         <img src="${producto.imagen}" class="product-img" alt="${
       producto.nombre
     }" />
-
+ 
         <div class="card-body">
           <h5 class="text-danger fw-bold">$${producto.precio.toLocaleString()}</h5>
-
+ 
           <p class="old-price">
-            $${producto.precioOriginal.toLocaleString()} 
+            $${producto.precioOriginal.toLocaleString()}
             <span class="discount">-${producto.descuento}%</span>
           </p>
-
+ 
           <h5 class="card-title mb-1">${producto.nombre}</h5>
-
+ 
           <div class="d-flex flex-wrap gap-2 my-3 sizes-container">
-
+ 
             ${producto.tallas.disponibles
               .map(
                 (t) => `
-                <span 
+                <span
                   class="px-3 py-2 bg-light border rounded size-option"
                   data-size="${t}"
                   data-id="${producto.id}"
@@ -266,11 +266,11 @@ function renderProductos(containerId, productosArray, categoria) {
               `
               )
               .join("")}
-
+ 
             ${producto.tallas.agotadas
               .map(
                 (t) => `
-                <span 
+                <span
                   class="px-3 py-2 bg-secondary text-white border rounded size-option disabled-size text-decoration-line-through opacity-75"
                   data-size="${t}"
                   data-id="${producto.id}"
@@ -278,9 +278,9 @@ function renderProductos(containerId, productosArray, categoria) {
               `
               )
               .join("")}
-
+ 
           </div>
-     <button 
+     <button
             class="btn btn-olimpia add-to-cart-btn px-4 d-block mx-auto"
             data-id="${producto.id}"
             data-category="${categoria}"
@@ -288,73 +288,68 @@ function renderProductos(containerId, productosArray, categoria) {
             Agregar al carrito
           </button>
         </div>
-
+ 
       </div>
     `;
-
+ 
     container.appendChild(col);
   });
-
+ 
   activarTallasClick();
   activarBotonesCarrito();
 }
-
-
+ 
 // 3. SISTEMA DE SELECCIÓN DE TALLAS
-
+ 
 const tallasSeleccionadas = {}; // { id_producto: "talla seleccionada" }
-
+ 
 function activarTallasClick() {
   const tallas = document.querySelectorAll(".size-option:not(.disabled-size)");
-
+ 
   tallas.forEach((t) => {
     t.addEventListener("click", () => {
       const id = t.dataset.id;
-
+ 
       document
         .querySelectorAll(`.size-option[data-id="${id}"]`)
         .forEach((el) => {
           el.classList.remove("size-selected");
         });
-
+ 
       t.classList.add("size-selected");
       tallasSeleccionadas[id] = t.dataset.size;
     });
   });
 }
-
+ 
 function activarBotonesCarrito() {
   const botones = document.querySelectorAll(".add-to-cart-btn");
-
+ 
   botones.forEach((btn) => {
     btn.addEventListener("click", () => {
       const idProducto = parseInt(btn.dataset.id);
       const categoria = btn.dataset.category;
-
+ 
       agregarAlCarrito(idProducto, categoria);
     });
   });
 }
-
+ 
 //  CARRITO
 let carrito = [];
-if (localStorage.getItem("carrito")) {
-  carrito = JSON.parse(localStorage.getItem("carrito"));
-}
-actualizarCarrito();
-
+ 
 function agregarAlCarrito(idProducto, categoria) {
 console.log(categoria)
   let arrayOrigen;
-
+ 
   if (categoria === "hombre") arrayOrigen = productosHombres;
   if (categoria === "mujer") arrayOrigen = productosMujeres;
   if (categoria === "ninos") arrayOrigen = productosNinos;
   if (categoria === "descuentos") arrayOrigen = productosDescuentos;
   const prod = arrayOrigen.find((p) => p.id === idProducto);
-
+ 
   const talla = tallasSeleccionadas[idProducto];
-
+ 
   if (!talla) {
     Swal.fire({
       icon: "warning",
@@ -364,17 +359,13 @@ console.log(categoria)
     });
     return;
   }
-
+ 
   carrito.push({
     ...prod,
     tallaSeleccionada: talla,
     categoria: categoria,
   });
-
-  actualizarCarrito();
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-
-
+ 
   Swal.fire({
     icon: "success",
     title: "Agregado al carrito",
@@ -382,17 +373,14 @@ console.log(categoria)
     confirmButtonColor: "#000",
   });
 }
-
+ 
 // Ejecutar
 renderProductos("storeMenContainer", productosHombres, "hombre");
 renderProductos("storeGirlContainer", productosMujeres, "mujer");
 renderProductos("storeKidContainer", productosNinos, "ninos");
-<<<<<<< HEAD
+renderProductos("storeDiscountContainer", productosDescuentos, "descuentos");
 
 
-
-
-// Funciones para agragar y actualizar al carrito al carrito
 
 // Funcion actualizar carrito
 function actualizarCarrito(){
@@ -456,9 +444,3 @@ function actualizarCarrito(){
   });
 }
 
-
-
-
-=======
-renderProductos("storeDiscountContainer", productosDescuentos, "descuentos");
->>>>>>> 4b203a21cef0000d16961facae11d4249d623471
