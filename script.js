@@ -29,7 +29,7 @@ const productosHombres = [
     precio: 219900,
     precioOriginal: 320000,
     descuento: 31,
-    imagen: "./img/hombres/3.jpg",
+    imagen: "./img/hombres/2.jpg",
     tallas: {
       disponibles: ["US 7", "US 7.5", "US 8", "US 8.5", "US 9", "US 10"],
       agotadas: [
@@ -50,7 +50,7 @@ const productosHombres = [
     precio: 249900,
     precioOriginal: 349900,
     descuento: 28,
-    imagen: "./img/hombres/2.jpg",
+    imagen: "./img/hombres/6.jpg",
     tallas: {
       disponibles: ["US 6", "US 6.5", "US 7", "US 8", "US 9"],
       agotadas: [
@@ -66,47 +66,7 @@ const productosHombres = [
     },
   },
 
-  {
-    id: 1004,
-    nombre: "Adidas Galaxy 6",
-    precio: 219900,
-    precioOriginal: 320000,
-    descuento: 31,
-    imagen: "./img/hombres/4.jpg",
-    tallas: {
-      disponibles: ["US 7", "US 7.5", "US 8", "US 8.5", "US 9", "US 10"],
-      agotadas: [
-        "US 5",
-        "US 5.5",
-        "US 6",
-        "US 6.5",
-        "US 9.5",
-        "US 10.5",
-        "US 11",
-      ],
-    },
-  },
-
-  {
-    id: 1005,
-    nombre: "Adidas Galaxy 6",
-    precio: 219900,
-    precioOriginal: 320000,
-    descuento: 31,
-    imagen: "./img/hombres/1.jpg",
-    tallas: {
-      disponibles: ["US 7", "US 7.5", "US 8", "US 8.5", "US 9", "US 10"],
-      agotadas: [
-        "US 5",
-        "US 5.5",
-        "US 6",
-        "US 6.5",
-        "US 9.5",
-        "US 10.5",
-        "US 11",
-      ],
-    },
-  },
+  
 
 ];
 
@@ -183,10 +143,10 @@ const productosNinos = [
     precio: 139900,
     precioOriginal: 180000,
     descuento: 22,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/nino/11.jpg",
     tallas: {
-      disponibles: ["US 1", "US 1.5", "US 2", "US 2.5", "US 3", "US 3.5"],
-      agotadas: ["US 4", "US 4.5", "US 5", "US 5.5"],
+      disponibles: ["US 3.5", "US 4", "US 4.5", "US 5"],
+      agotadas: ["US 5.5", "US 6", "US 6.5", "US 7"],
     },
   },
 
@@ -196,25 +156,27 @@ const productosNinos = [
     precio: 159900,
     precioOriginal: 210000,
     descuento: 24,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/nino/12.jpg",
     tallas: {
-      disponibles: ["US 1.5", "US 2", "US 2.5", "US 3", "US 3.5", "US 4"],
-      agotadas: ["US 4.5", "US 5", "US 5.5", "US 1"],
+      disponibles: ["US 3.5", "US 4", "US 4.5", "US 5","US 5.5"],
+      agotadas: ["US 6", "US 6.5", "US 7"],
     },
   },
 
   {
     id: 3003,
-    nombre: "Puma Anzarun",
+    nombre: "Adidas Streettalk",
     precio: 149900,
     precioOriginal: 200000,
     descuento: 25,
-    imagen: "/mnt/data/453dd94f-e35d-4425-9a11-52470a4971c7.png",
+    imagen: "./img/nino/13.jpg",
     tallas: {
-      disponibles: ["US 1", "US 1.5", "US 2", "US 2.5", "US 3", "US 3.5"],
-      agotadas: ["US 4", "US 4.5", "US 5", "US 5.5"],
+      disponibles: ["US 3.5", "US 4", "US 4.5", "US 5"],
+      agotadas: ["US 5.5", "US 6", "US 6.5", "US 7"],
     },
   },
+
+   
 ];
 
 
